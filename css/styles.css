@@ -1,0 +1,1070 @@
+body{
+    background-image: url("../img/Background/bg.png");
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-size:12px;
+    color: #333333;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1035fr 465fr;
+    grid-template-rows: 500px;
+}
+
+.header--home{
+    grid-column: 1;
+    background-image: url("../img/Header section/header/bg.png");
+    position: relative;
+}
+
+.header--home--logo--wrapper{
+    position: absolute;
+    left: 12%;
+    top: 50px;
+}
+
+.header--image{
+    display: block;
+    left: calc(30% + 100px);
+    position: absolute;
+    width: calc(70% - 100px);
+    height: calc(100% - 10px);
+    object-fit: contain;
+    object-position: right;
+}
+
+.header--logo{
+    display: block;
+    width:100%;
+}
+
+.header--title{
+    color: #3a3d3c;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+.icons-social{
+    font-size: 2em;
+    color: #8dccc3;
+    margin:50px 20px;
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+
+.font-scale{
+    display:inline-block;
+    color: #8dccc3;
+}
+
+.font-scale:hover{
+    color: rgb(241, 195, 104);
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.header--nav{
+    grid-column: 2;
+    background: #8dccc3 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="100%" x2="100%" y2="0" stroke="#fff" stroke-width="1"/></svg>');
+    position: relative;
+}
+
+.header--nav--button{
+    display: block;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background: transparent;
+    border: 2px solid white;
+    top: 10%;
+    right: 37%;
+    box-sizing: border-box;
+}
+
+@keyframes swing {
+    0% { transform:rotate(3deg) ; }
+    25% { transform:rotate(0deg); }
+    50% { transform:rotate(-3deg); }
+    75% { transform:rotate(0deg); }
+    100% { transform:rotate(3deg); }
+}
+
+.navigation{
+    z-index:1;
+    width:0;
+    opacity: 0;
+    right: -2px;
+    top: -14px;
+    height:120px;
+    position: absolute;
+    background-color: rgb(241, 195, 104);
+    transition: all 1s ease;
+    overflow: hidden;
+}
+
+.nav-item{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list{
+    margin:50px 35px;
+    color: white;
+    font-size: 14px;
+    display: inline-block;
+    list-style: none;
+}
+
+.header--nav--address{
+    display: block;
+    position: absolute;
+    color: #fff;
+    bottom: 34%;
+    right: 66%;
+}
+
+.header--nav--contacts{
+    display: block;
+    position: absolute;
+    color: #fff;
+    left: 35%;
+    top: 73%;
+    max-width: 42%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav--toggle {
+    display:block;
+    z-index:2;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: 120px;
+    width: 80px;
+    cursor: pointer;
+    transform: translate(-10%, -50%);
+}
+
+.nav--toggle span,
+.nav--toggle span:before,
+.nav--toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 60px;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: block;
+    content: '';
+    transition: all 0.5s ease-in-out;
+}
+
+.nav--toggle span:before {
+    top: -10px;
+}
+
+.nav--toggle span:after {
+    top: 10px;
+}
+
+.nav--toggle.active span {
+    background-color: transparent;
+}
+
+.nav--toggle.active span:before,
+.nav--toggle.active span:after {
+    top: 0;
+}
+
+.nav--toggle.active span:before {
+    transform: rotate(135deg);
+}
+
+.nav--toggle.active span:after {
+    transform: rotate(-135deg);
+}
+
+/*----------------------MAIN SECTION PROJECTS----------------*/
+
+.container--projects{
+    /*height: 100%;*/
+    display: grid;
+    grid-template-columns: 300fr 200fr 300fr 300fr 465fr;
+    grid-template-rows: 250px 250px 215px 300px 300px;
+    grid-template-areas:
+            "start start fondue fondue potter"
+            "start start fondue fondue tabano"
+            "louis proj-395 proj-395 proj-395 tabano"
+            "louis proj-395 proj-395 proj-395 fiji"
+            "sessan sessan sessan alessi end";
+}
+/*----------------------SECTION start----------------*/
+
+.project--start{
+    grid-area: start;
+    background: #e4b356 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="100%" x2="100%" y2="0" stroke="#fff" stroke-width="1"/></svg>');
+    text-decoration: none;
+    position:relative;
+}
+
+.project-list{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    display: block;
+    position: absolute;
+    font-size:13px;
+    top: 16%;
+    left: 3%;
+}
+
+.fa-arrow-hidden{
+    font-size:16px;
+    margin: 0 10px 0 0 ;
+    color:white;
+    opacity:0;
+}
+
+.project-list-li:hover .fa-arrow-hidden{
+    opacity:1;
+}
+
+.nav-item:hover{
+    color: #000;
+    font-weight: 600;
+}
+
+.start--title{
+    font-size: 3.8em;
+    /*font-size: 48px;*/
+    font-weight: 400;
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 15%;
+    right: 7%;
+    max-width: 42%;
+}
+
+/*----------------------SECTION fonduo----------------*/
+.project--fondue{
+    grid-area: fondue;
+    background-color: white;
+    position:relative;
+}
+
+.project--image{
+    display: block;
+    position: absolute;
+    width: calc(70% - 20px);
+    height: calc(100% - 10px);
+    object-fit: contain;
+}
+
+.project--image__fondue{
+    top: 0;
+    right: 5%;
+    object-position: right;
+}
+
+.project-about{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+
+.project-title{
+    margin:8px 0;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.project-about-list{
+    font-weight: 300;
+    letter-spacing: -1px;
+    margin-left:-40px;
+    list-style: none;
+}
+
+.project--link--wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+.project--link--wrapper__fondue{
+    top: 45%;
+    left: 15%;
+}
+
+.project-view{
+    padding:15% 6% 0 0;
+}
+
+.project-view-link{
+    width: 140px;
+    display: inline-block;
+    font-weight: 300;
+    text-decoration: none;
+    color: #333333;
+    font-size: 18px;
+    transform-origin: 0 0;
+    transition: all 0.5s;
+}
+
+.project-view-link:hover{
+    color: #f1c368;
+    transform: scale(1.3);
+}
+
+.fa-arrow-link{
+    color: #f1c368;
+    padding-right: 10px;
+}
+
+.project-rate{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:15% 10%;
+    position: relative;
+}
+
+.project-rate__fondue {
+   margin: 50% 0 0 0;
+}
+
+.fa-heart-style{
+    display: inline-block;
+    margin-bottom:10px;
+    font-size: 24px;
+    transform-origin: 0 0;
+    transition: all 0.3s;
+}
+
+.fa-heart-style:hover{
+    color: #f1c368;
+    transform:scale(1.1);
+}
+
+.rate-style{
+    font-weight: 300;
+    color:red;
+}
+
+/*----------POTTER-SECTION----------*/
+
+.project--potter{
+    grid-area: potter;
+    background: url("../img/Projects section/all/potter/bg-potter.png") repeat center;
+    position:relative;
+}
+.project--image__potter{
+    bottom: 0;
+    right: 0;
+    object-position: right;
+}
+.project--potter--about{
+    position: absolute;
+    top: 5%;
+    left: 10%;
+}
+.project--potter--about__text{
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+.project--link--wrapper__potter{
+    top: 45%;
+    left: 10%;
+}
+
+/*----------LOUIS-SECTION----------*/
+
+.project--louis{
+    grid-area: louis;
+    background-image: url("../img/Projects section/all/louis/bg-louis.png");
+    background-size: cover;
+    position:relative;
+}
+
+.project--image__louis{
+    bottom: 0;
+    right: 10%;
+    object-position: bottom;
+}
+
+.project__color{
+    color: #ededed;
+}
+
+.project--link--wrapper__louis{
+    top: 35%;
+    left: 15%;
+}
+
+/*----------PROJ-395-SECTION----------*/
+
+.project--395{
+    grid-area: proj-395;
+    background: url("../img/Projects section/all/395/bf-proj365.png") repeat;
+    position:relative;
+}
+
+.project--image__project--395{
+    top:10%;
+    left: 5%;
+    object-position: left;
+}
+
+.project--395--about{
+    position: absolute;
+    top: 20%;
+    right: 38%;
+}
+
+.project--link--wrapper__project--395{
+    top: 18%;
+    right: 10%;
+}
+
+/*----------TABANO-SECTION----------*/
+
+.project--tabano{
+    grid-area:tabano;
+    background-image: url("../img/Projects section/all/tabano/bg-tabano.png");
+    background-size: cover;
+    position:relative;
+    overflow: hidden;
+}
+.project--image__tabano{
+    top:5%;
+    left: 20%;
+    object-position: top;
+
+}
+
+.project--tabano--about{
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+}
+
+.project--link--wrapper__tabano{
+    flex-direction: row;
+    align-items: stretch;
+    bottom: 5%;
+    right: 10%;
+}
+
+/*----------FIJI-SECTION----------*/
+
+.project--fiji{
+    grid-area:fiji;
+    background-color: #ffffff;
+    position:relative;
+}
+
+.project--image__fiji{
+    top:5%;
+    left:1%;
+    object-position: left;
+}
+
+.project--fiji--about{
+    position: absolute;
+    right: 5%;
+    top:8%;
+}
+
+.project--link--wrapper__fiji{
+    right: 3%;
+    top:40%;
+}
+
+/*----------SESSAN-SECTION----------*/
+
+.project--sesann{
+    grid-area:sessan;
+    background-color: white;
+    position:relative;
+}
+
+.project--image__sesann {
+    top:5%;
+    left:15%;
+    object-position: top;
+}
+.project--sesann--about{
+    position: absolute;
+    bottom: 2%;
+    left: 20%;
+}
+
+.project--link--wrapper__sessan{
+    flex-direction: row;
+    align-items: stretch;
+    bottom: 5%;
+    right: 30%;
+}
+
+/*----------ALESSI-SECTION----------*/
+
+.project--alessi{
+    grid-area:alessi;
+    background-image: url("../img/Projects section/all/alessi/bg-alessi.png");
+    background-size: cover;
+    position:relative;
+}
+
+.project--image__alessi{
+    top:5%;
+    left:0;
+    object-position: left;
+}
+
+.project--alessi--about{
+    position: absolute;
+    top: 50px;
+    right: 30px;
+}
+
+.project--link--wrapper__alessi{
+    right: 4%;
+    top:45%;
+}
+/*----------END-SECTION----------*/
+.project--end{
+    grid-area:end;
+    background: #f1c368 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="100%" x2="0" y2="0" stroke="#fff" stroke-width="1" style="transform-origin: 0 100%; transform: rotate(45deg) scaleY(1.5);"/></svg>') left bottom no-repeat;
+    background-size: auto 100%;
+    position:relative;
+}
+
+.project--end--wrapper{
+    position: absolute;
+    left: 20%;
+    top: 10%;
+}
+
+.end-list{
+    margin: 0 0 0 -60px;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    display: block;
+}
+
+/*------------Studio--------------*/
+
+.container--studio{
+    display: grid;
+    grid-template-columns: 465fr 100fr 400fr 400fr 135fr;
+    grid-template-rows:50px 450px;
+    grid-gap: 10px 30px;
+    grid-template-areas: 'start . . . .' 'start . about awards .';
+}
+
+.container--studio--start{
+    grid-area: start;
+    background: #f29f76 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="100%" x2="100%" y2="0" stroke="#fff" stroke-width="1"/></svg>');
+    position: relative;
+}
+
+.studio--about{
+    grid-area: about;
+    padding: 1% 2%;
+    position: relative;
+    overflow: hidden;
+}
+
+.studio--about__position{
+    position: absolute;
+    /*left:2%;*/
+    /*right:2%;*/
+    /*padding: 8%;*/
+    /*padding: 10% 2%;*/
+}
+
+.studio--about--text{
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.studio--about--text__italic{
+    font-weight: 500;
+    font-style: italic;
+}
+
+.studio--awards{
+    grid-area: awards;
+    padding: 5% 2%;
+    font-weight: 300;
+    /*font-size: 18px;*/
+    position: relative;
+}
+
+.studio--awards--title{
+    font-size: 14px;
+    margin: 30px 0 15px 5px;
+    position: relative;
+}
+
+.studio--awards--title:after{
+    content: ' ';
+    position: absolute;
+    left:0;
+    bottom:-5px;
+    height: 1px;
+    background-color: darkgrey;
+    width: 100%;
+}
+
+.studio--awards--columns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.studio--awards--text:first-child{
+    margin-right:20px;
+}
+
+
+.container--staff{
+    display: grid;
+    grid-template-columns:100fr 300fr 300fr 300fr 300fr 145fr;
+    grid-template-rows:100px 390px;
+    grid-gap: 10px 5px;
+    grid-template-areas:" . . . . . . " " . staff-start staff1 staff2 staff3 . ";
+}
+
+.container--staff--start{
+    grid-area: staff-start;
+    position: relative;
+}
+
+.staff--start{
+     position: absolute;
+     left:2%;
+     right: 2%;
+ }
+
+.staff--start--text{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.staff--item1{
+    grid-area:staff1 ;
+    position: relative;
+}
+
+.staff--item--wrapper {
+    position: absolute;
+    left:2% ;
+    right:2%;
+
+}
+
+.staff--item2{
+    grid-area:staff2 ;
+    position: relative;
+}
+
+.staff--item3{
+    grid-area: staff3;
+    position: relative;
+}
+
+.staff--links--wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.staff--link__space{
+    margin: 4px;
+}
+
+.staff--links__color{
+    color: #eb5c29;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/*------------NEWS-------------*/
+
+.container--news{
+    display: grid;
+    grid-template-columns: 465fr 88fr 400fr 400fr 140fr;
+    grid-template-rows: 500px;
+    grid-gap: 50px 20px;
+    grid-template-areas: "news-start . article1 article2 . ";
+}
+
+.container--news--start{
+    grid-area: news-start ;
+    background: #d9ecc3 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="100%" x2="100%" y2="0" stroke="#fff" stroke-width="1"/></svg>');
+    position: relative;
+}
+
+.news--article--wrapper{
+    position: absolute;
+    left:2%;
+    right:2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.news--article--1{
+    grid-area: article1;
+    position: relative;
+}
+
+.news--article--2{
+    grid-area: article2 ;
+    position: relative;
+
+}
+
+.news--article--title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.image--wrapper{
+    display: block;
+    width:100%;
+    height:0;
+    padding-top: 56.25%;
+    position: relative;
+}
+
+.image__position{
+    display: block;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /*object-position: top;*/
+}
+
+.article--link{
+    display: block;
+    align-self: flex-end;
+}
+
+/*------------FO0TER--------------*/
+
+.container--footer{
+    display: grid;
+    grid-template-columns: 750fr 750fr;
+    grid-template-rows: 640px;
+    grid-template-areas: "map contacts";
+}
+
+.footer--map{
+    position: relative;
+    background-color: #333333;
+    grid-area: map;
+}
+
+.map{
+    position: absolute;
+    overflow:hidden;
+    width: 100% ;
+    height: 100%;
+
+}
+
+.footer--contacts{
+    position: relative;
+    grid-area: contacts;
+}
+
+.footer--contacts--text{
+    font-size: 13px;
+    font-style: normal;
+}
+
+.footer--contacts--text__position{
+    color:#333333;
+    position: absolute;
+    top: 15%;
+    left: 17%;
+}
+
+.footer--logo{
+    position: absolute;
+    top: 15%;
+    left: 55%;
+}
+
+.footer--copyrights{
+    position: absolute;
+    left: 17%;
+    bottom: 5%;
+}
+
+
+
+@media screen and (min-width:545px) and (max-width:1100px) {
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 120px 400px;
+    }
+
+    .header--home{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .header--nav{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .header--logo{
+        max-width: 80%;
+    }
+
+      .header--nav--button{
+        width: 120px;
+        height: 120px;
+        right: 2px;
+        top: 2px;
+        border: none;
+    }
+
+    .navigation {
+        height: 120px;
+        max-width: 98vw;
+    }
+
+    .nav-list {
+        margin: 50px 17px;
+    }
+
+    .container--projects{
+        font-size: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 400px 250px 400px 350px 400px 300px;
+        grid-template-areas: "start fondue" "fiji potter" "louis tabano" "proj-395 proj-395" "sessan sessan" "alessi end";
+    }
+
+    .start--title{
+        font-size: 32px;
+        bottom: 2%;
+        right: 7%;
+        max-width: 42%;
+    }
+
+    .project--link--wrapper__tabano{
+        flex-direction: column;
+        align-items: center;
+        bottom: 0;
+        right: 1%;
+    }
+
+    .project-view{
+        padding: 25% 5% 0 0;
+    }
+
+    .project--link--wrapper__project--395{
+        top: 35%;
+        right: 15%;
+    }
+
+    .project--image__sesann {
+        top:12%;
+        left:15%;
+        object-position: top;
+    }
+
+    .container--studio{
+        grid-template-columns: 65fr 400fr 50fr 400fr 400fr 50fr;
+        grid-template-rows:20px 500px 250px;
+        grid-gap: 10px 10px;
+        grid-template-areas:'start start . . . .' 'start start . awards awards .' ' . about about about about .';
+    }
+
+    .container--staff{
+        grid-template-columns:50fr 300fr 300fr 300fr 50fr;
+        grid-template-rows:150px 250px ;
+        grid-gap: 50px 10px;
+        grid-template-areas: ". staff-start staff-start staff-start ." ". staff1 staff2 staff3 . ";
+    }
+
+    .container--news{
+        grid-template-columns: 465fr 400fr 400fr 5fr;
+        grid-template-rows: 400px;
+        grid-gap: 50px 50px;
+        grid-template-areas: "news-start article1 article2 .";
+    }
+
+    .container--footer{
+        grid-template-columns: 1fr ;
+        grid-template-rows: 375px 375px;
+        grid-template-areas: " map " "contacts ";
+    }
+
+    .footer--copyrights{
+        left: 20%;
+        transform: translateY(100px);
+    }
+    .studio--about--text{
+       font-size: 13px;
+    }
+}
+
+
+@media screen and (max-width: 545px) {
+
+
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 120px 400px;
+    }
+
+    .header--logo {
+        max-width: 60%;
+    }
+
+    .header--home{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .header--nav{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .icons-social{
+        white-space: nowrap;
+        transform: translateX(-15px);
+    }
+
+    .header--nav--button{
+        width: 120px;
+        height: 120px;
+        right: 2px;
+        top: 2px;
+        border: none;
+    }
+
+    .navigation {
+        height: 120px;
+        max-width: 98vw;
+    }
+
+    .nav-list {
+        margin: 50px 17px;
+    }
+
+    .container--projects{
+        font-size: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 360px 245px 465px 330px 200px 380px 220px 270px 150px;
+        grid-template-areas: "start" "fondue" "potter" "louis" "proj-395" "fiji" "tabano" "sessan" "alessi" "end";
+    }
+
+    .project-list{
+        top: 5%;
+    }
+
+    .project-view{
+        padding: 10% 1% 0 0;
+    }
+
+    .start--title{
+        font-size: 32px;
+        bottom: 2%;
+        right: 7%;
+        max-width: 42%;
+    }
+
+    .project--end--wrapper{
+        left: 67%;
+    }
+
+    .project--link--wrapper__project--395{
+        top: 40%;
+        right: 5%;
+    }
+
+    .project--link--wrapper__sessan{
+        bottom: 0;
+        right: 10%;
+    }
+    .project--sesann--about{
+        position: absolute;
+        bottom: 1%;
+        left: 10%;
+    }
+
+     .project--link--wrapper__tabano{
+        flex-direction: column;
+        align-items: center;
+        bottom: 0;
+        right: 1%;
+    }
+
+    .container--studio{
+        grid-template-columns: 1fr;
+        grid-gap: 20px 20px;
+        grid-template-rows: 100px 250px 430px ;
+        grid-template-areas: "start" "about" "awards"  ;
+    }
+    .studio--about--text{
+        font-size: 14px;
+    }
+
+    .container--staff{
+        grid-template-columns: 1fr;
+        grid-gap: 10px 10px;
+        grid-template-rows: 5px 220px 350px 350px 350px 5px;
+        grid-template-areas:"." "staff-start" "staff1" "staff2" "staff3" "." ;
+    }
+
+    .container--news{
+
+        grid-template-columns: 1fr;
+        grid-gap: 30px 20px;
+        grid-template-rows:  150px 390px 390px ;
+        grid-template-areas: "news-start" "article1" "article2" ;
+    }
+
+    .container--footer{
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        grid-template-rows:50px 320px 375px;
+        grid-template-areas: "." "map" "contacts";
+    }
+
+    .footer--copyrights{
+        left:5%;
+        transform: translateY(100px);
+    }
+
+}
+
+
+
