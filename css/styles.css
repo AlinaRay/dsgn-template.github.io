@@ -10,7 +10,7 @@ body{
 .header{
     width: 100%;
     display: grid;
-    grid-template-columns: 1035fr 465fr;
+    grid-template-columns: 1000fr 500fr;
     grid-template-rows: 500px;
 }
 
@@ -113,7 +113,7 @@ body{
 .nav-list{
     margin:50px 35px;
     color: white;
-    font-size: 14px;
+    font-size: 1.16em;
     display: inline-block;
     list-style: none;
 }
@@ -220,13 +220,13 @@ body{
     color: white;
     display: block;
     position: absolute;
-    font-size:13px;
+    font-size:1.08em;
     top: 16%;
     left: 3%;
 }
 
 .fa-arrow-hidden{
-    font-size:16px;
+    font-size:1.3em;
     margin: 0 10px 0 0 ;
     color:white;
     opacity:0;
@@ -316,7 +316,8 @@ body{
     font-weight: 300;
     text-decoration: none;
     color: #333333;
-    font-size: 18px;
+    font-size: 1.5em;
+    white-space: nowrap;
     transform-origin: 0 0;
     transition: all 0.5s;
 }
@@ -346,7 +347,7 @@ body{
 .fa-heart-style{
     display: inline-block;
     margin-bottom:10px;
-    font-size: 24px;
+    font-size: 2em;
     transform-origin: 0 0;
     transition: all 0.3s;
 }
@@ -488,7 +489,7 @@ body{
 
 .project--link--wrapper__fiji{
     right: 3%;
-    top:40%;
+    top:45%;
 }
 
 /*----------SESSAN-SECTION----------*/
@@ -503,6 +504,7 @@ body{
     top:5%;
     left:15%;
     object-position: top;
+    max-height: 60%;
 }
 .project--sesann--about{
     position: absolute;
@@ -524,6 +526,7 @@ body{
     background-image: url("../img/Projects section/all/alessi/bg-alessi.png");
     background-size: cover;
     position:relative;
+    overflow: hidden;
 }
 
 .project--image__alessi{
@@ -597,7 +600,7 @@ body{
 
 .studio--about--text{
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1.3em;
 }
 
 .studio--about--text__italic{
@@ -614,7 +617,7 @@ body{
 }
 
 .studio--awards--title{
-    font-size: 14px;
+    font-size: 1.16em;
     margin: 30px 0 15px 5px;
     position: relative;
 }
@@ -660,7 +663,7 @@ body{
  }
 
 .staff--start--text{
-    font-size: 14px;
+    font-size: 1.16em;
     font-weight: 300;
 }
 
@@ -690,7 +693,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 14px;
+    font-size: 1.16em;
 }
 
 .staff--link__space{
@@ -800,7 +803,7 @@ body{
 }
 
 .footer--contacts--text{
-    font-size: 13px;
+    font-size: 1.08em;
     font-style: normal;
 }
 
@@ -940,7 +943,7 @@ body{
 
     .header {
         grid-template-columns: 1fr;
-        grid-template-rows: 120px 400px;
+        grid-template-rows: 120px 350px;
     }
 
     .header--logo {
@@ -1060,11 +1063,47 @@ body{
     }
 
     .footer--copyrights{
-        left:5%;
+        text-align: center;
         transform: translateY(100px);
     }
 
+    .footer--contacts--text__position {
+        top: 45%;
+        left: 5%;
+    }
+    .footer--logo {
+        top: 15%;
+        left: 48%;
+    }
 }
 
+
+@media screen and (min-width: 1500px) {
+body{
+    font-size:14px;
+}
+    .header {
+        grid-template-columns: 1000fr 500fr;
+        grid-gap: 0 100px;
+        grid-template-rows: 600px;
+    }
+
+    .project--link--wrapper__potter{
+        top: 50%;
+        left: 10%;
+    }
+
+    .project--image__sesann {
+        top:5%;
+        left:15%;
+        object-position: top;
+        max-height: 50%;
+    }
+
+    .project--end--wrapper{
+        left: 65%;
+    }
+
+}
 
 
