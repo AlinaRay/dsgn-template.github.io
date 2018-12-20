@@ -28,3 +28,19 @@ swing.onmouseover = function() {
 swing.onmouseout = function() {
     this.style.animation="none";
 };
+
+// adding rate
+let a = document.querySelectorAll(".project-rate");
+a.forEach(function(s) { s.addEventListener("click", function (e) {
+    var flagScale = true;
+    let rate = this.querySelector(".rate-style");
+    let far = this.querySelector(".fa-heart-style");
+    far.style.transform="rotate(45deg)";
+    setTimeout(function(){
+        far.style.transform="rotate(0)";
+
+    }, 1000);
+    let number = Number(rate.innerHTML.substr(1, rate.innerHTML.length))+1;
+    rate.removeChild(rate.firstChild);
+rate.appendChild(document.createTextNode("+"+number));
+})});
